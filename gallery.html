@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A curated visual archive of moments, places and experiences.">
+  <title>Gallery | Mohamad Asyraf Mohd Razali</title>
+
+  <script>
+    (function () {
+      var t = "winter";
+      try { t = localStorage.getItem("theme") || "winter"; } catch (e) {}
+      if (["winter","spring","summer","autumn"].indexOf(t) === -1) t = "winter";
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/gallery.css">
+</head>
+
+<body class="gallery-page">
+
+<header class="site-header">
+  <a class="brand" href="index.html">A. Razali</a>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biodata.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="gallery.html" class="active" aria-current="page">Gallery</a></li>
+
+      <li>
+        <div class="seasons" role="group" aria-label="Choose a season theme">
+
+          <button class="season" type="button" data-season="winter" aria-label="Winter theme" title="Winter">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5"/>
+            </svg>
+          </button>
+
+          <button class="season" type="button" data-season="spring" aria-label="Spring theme" title="Spring">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="2"/>
+              <path d="M12 10C10.3 7.7 10.3 4.7 12 2.5c1.7 2.2 1.7 5.2 0 7.5zM12 14c1.7 2.3 1.7 5.3 0 7.5-1.7-2.2-1.7-5.2 0-7.5zM10 12C7.7 13.7 4.7 13.7 2.5 12 4.7 10.3 7.7 10.3 10 12zM14 12c2.3-1.7 5.3-1.7 7.5 0-2.2 1.7-5.2 1.7-7.5 0z"/>
+            </svg>
+          </button>
+
+          <button class="season" type="button" data-season="summer" aria-label="Summer theme" title="Summer">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/>
+            </svg>
+          </button>
+
+          <button class="season" type="button" data-season="autumn" aria-label="Autumn theme" title="Autumn">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 4C9.5 4 4.5 9 4.5 14.5c0 2.2 1 4 2.9 5C13.5 19.5 20 14.5 20 4z"/>
+              <path d="M4.5 20c3.5-5.5 7.5-8.5 11.5-10.5"/>
+            </svg>
+          </button>
+
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+
+  <!-- INTRODUCTION -->
+  <section class="gallery-intro">
+    <div class="gallery-wrap">
+
+      <div class="intro-topline">
+        <span class="mono">PERSONAL ARCHIVE · EST. 2026</span>
+        <span class="mono">COLLECTION NO. 01</span>
+      </div>
+
+      <div class="intro-heading">
+        <p class="eyebrow mono">MOMENTS / PLACES / PEOPLE</p>
+        <h1>Fragments <em>of</em> Life<span>.</span></h1>
+        <p class="intro-copy">
+          A visual record of the places I've been, the people I've met
+          and the experiences that have shaped the journey.
+        </p>
+      </div>
+
+      <div class="intro-bottom">
+        <span class="mono">AN ONGOING COLLECTION</span>
+        <a href="#collections">Explore the collection <b>↓</b></a>
+        <span class="mono">2024 — 2026</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FEATURED IMAGE -->
+  <section class="gallery-feature">
+    <div class="gallery-wrap">
+
+      <button class="feature-photo photo-trigger"
+        type="button"
+        data-full="images/featured.jpeg"
+        data-title="A moment in time"
+        data-date="2026"
+        data-category-name="Featured">
+
+        <img src="images/featured.jpeg" alt="Featured photograph">
+
+        <span class="photo-placeholder">
+          <b>FEATURED IMAGE</b>
+          <small>Replace: images/featured.jpeg</small>
+        </span>
+
+        <span class="feature-overlay">
+          <small class="mono">THE COLLECTION · 001</small>
+          <strong>A moment in time <i>↗</i></strong>
+        </span>
+
+      </button>
+
+      <div class="feature-note">
+        <span class="mono">FIG. 001</span>
+        <p>A selection of moments, preserved beyond the moment itself.</p>
+        <span class="mono">PERSONAL ARCHIVE</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PHOTO COLLECTIONS -->
+  <section class="gallery-collections" id="collections">
+    <div class="gallery-wrap">
+
+      <div class="collection-heading">
+        <div>
+          <p class="eyebrow mono">THE ARCHIVE</p>
+          <h2>Collected <em>moments.</em></h2>
+        </div>
+
+        <p>
+          A considered selection of everyday life, milestones and experiences.
+        </p>
+      </div>
+
+      <!-- FILTERS -->
+      <div class="gallery-toolbar">
+
+        <div class="gallery-filters" role="group" aria-label="Filter photographs">
+          <button class="gallery-filter is-active" data-filter="all" aria-pressed="true">All</button>
+          <button class="gallery-filter" data-filter="journey" aria-pressed="false">The Journey</button>
+          <button class="gallery-filter" data-filter="occasions" aria-pressed="false">The Occasions</button>
+          <button class="gallery-filter" data-filter="craft" aria-pressed="false">The Craft</button>
+          <button class="gallery-filter" data-filter="inbetween" aria-pressed="false">The In-Between</button>
+        </div>
+
+        <span class="gallery-count mono">
+          <b id="visibleCount">08</b> / 08 FRAMES
+        </span>
+
+      </div>
+
+      <!-- GALLERY GRID -->
+      <div class="gallery-grid" id="galleryGrid">
+
+        <button class="gallery-item tall photo-trigger"
+          data-category="journey"
+          data-full="images/journey-01.jpeg"
+          data-title="University life"
+          data-date="2026"
+          data-category-name="The Journey">
+
+          <span class="gallery-media">
+            <img src="images/journey-01.jpeg" alt="University life">
+            <span class="photo-placeholder"><b>IMAGE 01</b><small>University life</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>01 / THE JOURNEY</small><strong>University life</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+        <button class="gallery-item wide photo-trigger"
+          data-category="occasions"
+          data-full="images/occasion-01.jpeg"
+          data-title="Gathered together"
+          data-date="2026"
+          data-category-name="The Occasions">
+
+          <span class="gallery-media">
+            <img src="images/occasion-01.jpeg" alt="Events and programmes">
+            <span class="photo-placeholder"><b>IMAGE 02</b><small>Events & programmes</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>02 / THE OCCASIONS</small><strong>Gathered together</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+        <button class="gallery-item photo-trigger"
+          data-category="craft"
+          data-full="images/craft-01.jpeg"
+          data-title="Behind the work"
+          data-date="2026"
+          data-category-name="The Craft">
+
+          <span class="gallery-media">
+            <img src="images/craft-01.jpeg" alt="Work and experiences">
+            <span class="photo-placeholder"><b>IMAGE 03</b><small>Work & experiences</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>03 / THE CRAFT</small><strong>Behind the work</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+        <button class="gallery-item tall photo-trigger"
+          data-category="inbetween"
+          data-full="images/inbetween-01.jpeg"
+          data-title="Somewhere in between"
+          data-date="2025"
+          data-category-name="The In-Between">
+
+          <span class="gallery-media">
+            <img src="images/inbetween-01.jpeg" alt="Personal moments">
+            <span class="photo-placeholder"><b>IMAGE 04</b><small>Personal moments</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>04 / THE IN-BETWEEN</small><strong>Somewhere in between</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+        <button class="gallery-item photo-trigger"
+          data-category="journey"
+          data-full="images/journey-02.jpeg"
+          data-title="Days on campus"
+          data-date="2025"
+          data-category-name="The Journey">
+
+          <span class="gallery-media">
+            <img src="images/journey-02.jpeg" alt="Campus moments">
+            <span class="photo-placeholder"><b>IMAGE 05</b><small>Campus moments</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>05 / THE JOURNEY</small><strong>Days on campus</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+        <button class="gallery-item wide photo-trigger"
+          data-category="occasions"
+          data-full="images/occasion-02.jpeg"
+          data-title="Made possible together"
+          data-date="2026"
+          data-category-name="The Occasions">
+
+          <span class="gallery-media">
+            <img src="images/occasion-02.jpeg" alt="Programme memories">
+            <span class="photo-placeholder"><b>IMAGE 06</b><small>Programmes & people</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>06 / THE OCCASIONS</small><strong>Made possible together</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+        <button class="gallery-item photo-trigger"
+          data-category="craft"
+          data-full="images/craft-02.jpeg"
+          data-title="Learning by doing"
+          data-date="2026"
+          data-category-name="The Craft">
+
+          <span class="gallery-media">
+            <img src="images/craft-02.jpeg" alt="Learning and practice">
+            <span class="photo-placeholder"><b>IMAGE 07</b><small>Learning & practice</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>07 / THE CRAFT</small><strong>Learning by doing</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+        <button class="gallery-item photo-trigger"
+          data-category="inbetween"
+          data-full="images/inbetween-02.jpeg"
+          data-title="Little details"
+          data-date="2024"
+          data-category-name="The In-Between">
+
+          <span class="gallery-media">
+            <img src="images/inbetween-02.jpeg" alt="Places and details">
+            <span class="photo-placeholder"><b>IMAGE 08</b><small>Places & details</small></span>
+          </span>
+
+          <span class="item-caption">
+            <span><small>08 / THE IN-BETWEEN</small><strong>Little details</strong></span>
+            <i>↗</i>
+          </span>
+        </button>
+
+      </div>
+
+      <div class="gallery-endnote">
+        <span class="mono">END OF CURRENT SELECTION</span>
+        <i></i>
+        <span class="mono">MORE TO COME</span>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- LIGHTBOX -->
+<div class="gallery-lightbox"
+  id="galleryLightbox"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Photograph viewer">
+
+  <button class="lightbox-close" type="button" aria-label="Close">×</button>
+  <button class="lightbox-prev" type="button" aria-label="Previous">←</button>
+
+  <figure>
+    <img src="" alt="" id="lightboxImage">
+
+    <figcaption>
+      <span>
+        <small class="mono" id="lightboxCategory">COLLECTION</small>
+        <strong id="lightboxTitle"></strong>
+      </span>
+      <small class="mono" id="lightboxDate"></small>
+    </figcaption>
+  </figure>
+
+  <button class="lightbox-next" type="button" aria-label="Next">→</button>
+  <span class="lightbox-index mono" id="lightboxIndex">01 / 08</span>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <ul class="foot-nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="biodata.html">About</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="publications.html">Publications</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+  </ul>
+
+  <p>&copy; 2026 Mohamad Asyraf Mohd Razali. All rights reserved.</p>
+  <p class="mono">Created: 25 October 2026 | Last updated: 1 November 2026</p>
+  <p class="mono">Contact: <a href="mailto:mohdasyraf1205@gmail.com">mohdasyraf1205@gmail.com</a></p>
+</footer>
+
+<script src="js/script.js"></script>
+<script src="js/gallery.js"></script>
+
+</body>
+</html>

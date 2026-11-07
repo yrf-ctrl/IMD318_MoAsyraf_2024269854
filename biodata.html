@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Mohamad Asyraf bin Mohd Razali</title>
+  <script>
+    (function () {
+      var t = "winter";
+      try { t = localStorage.getItem("theme") || "winter"; } catch (e) {}
+      if (["winter", "spring", "summer", "autumn"].indexOf(t) === -1) { t = "winter"; }
+      document.documentElement.setAttribute("data-theme", t);
+      document.documentElement.classList.add("js");
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/about.css">
+</head>
+<body>
+
+  <!-- ===== HEADER AND NAVIGATION ===== -->
+  <header class="site-header">
+    <a class="brand" href="index.html">A. Razali</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="biodata.html" class="active">About</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><div class="seasons" role="group" aria-label="Choose a season theme"><button class="season" type="button" data-season="winter" aria-label="Winter theme" title="Winter"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M3.3 7l17.4 10M3.3 17L20.7 7M9.5 3.5L12 6l2.5-2.5M9.5 20.5L12 18l2.5 2.5"/></svg></button><button class="season" type="button" data-season="spring" aria-label="Spring theme" title="Spring"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 10C10.3 7.7 10.3 4.7 12 2.5c1.7 2.2 1.7 5.2 0 7.5zM12 14c1.7 2.3 1.7 5.3 0 7.5-1.7-2.2-1.7-5.2 0-7.5zM10 12C7.7 13.7 4.7 13.7 2.5 12 4.7 10.3 7.7 10.3 10 12zM14 12c2.3-1.7 5.3-1.7 7.5 0-2.2 1.7-5.2 1.7-7.5 0z"/></svg></button><button class="season" type="button" data-season="summer" aria-label="Summer theme" title="Summer"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/></svg></button><button class="season" type="button" data-season="autumn" aria-label="Autumn theme" title="Autumn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4C9.5 4 4.5 9 4.5 14.5c0 2.2 1 4 2.9 5C13.5 19.5 20 14.5 20 4z"/><path d="M4.5 20c3.5-5.5 7.5-8.5 11.5-10.5"/></svg></button></div></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== PAGE TITLE AND JUMP BAR ===== -->
+    <div class="page-title" id="top-jump">
+      <p class="mono label">About</p>
+      <h1>The person behind the work</h1>
+      <ul class="jump">
+        <li><a href="#dolce">Dolce far niente</a></li>
+        <li><a href="#about-me">About me</a></li>
+        <li><a href="#life-section">Life outside work</a></li>
+        <li><a href="#watchlist">Watchlist</a></li>
+      </ul>
+    </div>
+
+    <!-- ===== DOLCE FAR NIENTE ===== -->
+    <section id="dolce">
+      <div class="wrap">
+        <div class="dfn reveal">
+          <div class="dfn-text">
+            <p class="mono label">Italian, <em>noun</em></p>
+            <h2>Dolce far niente</h2>
+            <p>The sweetness of doing nothing. A reminder that good work needs good rest.</p>
+          </div>
+          <div class="dfn-show" id="dfnShow">
+            <div class="dfn-slide ph1 on"></div>
+            <div class="dfn-slide ph2"></div>
+            <div class="dfn-slide ph3"></div>
+            <div class="dfn-ctrl">
+              <button class="ctrl-btn" id="dfnPrev" type="button" aria-label="Previous photo">&larr;</button>
+              <span class="mono" id="dfnCount">1 / 3</span>
+              <button class="ctrl-btn" id="dfnNext" type="button" aria-label="Next photo">&rarr;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ME ===== -->
+    <section id="about-me" class="alt">
+      <div class="wrap">
+        <p class="mono label reveal">01</p>
+        <h2 class="reveal">About Me</h2>
+        <div class="rule"></div>
+
+        <div class="me-grid">
+
+          <!-- Left: quick facts and CV -->
+          <div class="reveal">
+            <h3 class="mini">Quick facts</h3>
+            <dl class="fact-grid">
+              <div class="fact wide"><dt>Name</dt><dd>Mohamad Asyraf Mohd Razali</dd></div>
+              <div class="fact"><dt>From</dt><dd>Selangor, Malaysia</dd></div>
+              <div class="fact"><dt>Born</dt><dd>12 May 2006 <span class="age" id="age"></span></dd></div>
+              <div class="fact"><dt>Star sign</dt><dd>Taurus</dd></div>
+              <div class="fact"><dt>CGPA</dt><dd>3.81</dd></div>
+              <div class="fact wide"><dt>Education</dt><dd>UiTM Rembau Campus</dd></div>
+              <div class="fact"><dt>Favourite subjects</dt><dd>History and Social Studies</dd></div>
+              <div class="fact"><dt>Dream job</dt><dd>Diplomat, or a life in politics</dd></div>
+            </dl>
+
+            <div class="cv-strip">
+              <div>
+                <p class="mini">Curriculum vitae</p>
+              </div>
+              <a class="btn pill" href="media/asyraf-razali-cv.pdf" download>Download CV</a>
+            </div>
+          </div>
+
+          <!-- Right: skills -->
+          <div class="reveal">
+            <h3 class="mini">Soft skills</h3>
+            <ul class="pills">
+              <li>Strategic Thinking</li>
+              <li>Adaptive Communication</li>
+              <li>Cross-Cultural Intelligence</li>
+              <li>Time management</li>
+              <li>Reflective Listening</li>
+            </ul>
+
+            <h3 class="mini">Technical skills</h3>
+            <ul class="pills">
+              <li>Quantitative Analysis</li>
+              <li>Microsoft Office</li>
+              <li>Risk Management</li>
+              <li>Report documentation</li>
+              <li>Portfolio Optimization</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <h3 class="mini reveal" style="margin-top:56px;">Languages</h3>
+        <ul class="langs reveal">
+          <li class="lang">
+            <span class="flag"><svg viewBox="0 0 28 14" preserveAspectRatio="xMinYMid slice" role="img" aria-label="Flag of Malaysia"><rect width="28" height="14" fill="#fff"/><path d="M0 0h28v1H0zM0 2h28v1H0zM0 4h28v1H0zM0 6h28v1H0zM0 8h28v1H0zM0 10h28v1H0zM0 12h28v1H0z" fill="#cc0001"/><rect width="14" height="8" fill="#010066"/><circle cx="5" cy="4" r="3" fill="#fc0"/><circle cx="6" cy="4" r="2.4" fill="#010066"/><polygon points="9.60,1.70 9.83,2.98 10.60,1.93 10.25,3.18 11.40,2.57 10.55,3.54 11.84,3.49 10.65,4.00 11.84,4.51 10.55,4.46 11.40,5.43 10.25,4.82 10.60,6.07 9.83,5.02 9.60,6.30 9.37,5.02 8.60,6.07 8.95,4.82 7.80,5.43 8.65,4.46 7.36,4.51 8.55,4.00 7.36,3.49 8.65,3.54 7.80,2.57 8.95,3.18 8.60,1.93 9.37,2.98" fill="#fc0"/></svg></span>
+            <span><strong>Bahasa Melayu</strong><span class="lvl"><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i></span>Proficient</span></span>
+          </li>
+          <li class="lang">
+            <span class="flag"><svg viewBox="0 0 60 30" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Flag of the United Kingdom"><rect width="60" height="30" fill="#012169"/><path d="M0 0L60 30M60 0L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0L60 30M60 0L0 30" stroke="#c8102e" stroke-width="2"/><path d="M30 0V30M0 15H60" stroke="#fff" stroke-width="10"/><path d="M30 0V30M0 15H60" stroke="#c8102e" stroke-width="6"/></svg></span>
+            <span><strong>English</strong><span class="lvl"><span class="meter"><i class="on"></i><i class="on"></i><i class="on"></i></span>Proficient</span></span>
+          </li>
+          <li class="lang">
+            <span class="flag"><svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Flag of France"><rect width="1" height="2" fill="#0055a4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ef4135"/></svg></span>
+            <span><strong>French</strong><span class="lvl"><span class="meter"><i class="on"></i><i class="on"></i><i></i></span>Intermediate</span></span>
+          </li>
+          <li class="lang">
+            <span class="flag"><svg viewBox="0 0 3 2" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Flag of Italy"><rect width="1" height="2" fill="#009246"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#ce2b37"/></svg></span>
+            <span><strong>Italian</strong><span class="lvl"><span class="meter"><i class="on"></i><i class="on"></i><i></i></span>Intermediate</span></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== LIFE OUTSIDE WORK ===== -->
+    <section id="life-section">
+      <div class="wrap">
+        <p class="mono label reveal">02</p>
+        <h2 class="reveal">Life Outside Work</h2>
+        <div class="rule"></div>
+
+        <div id="life" class="tabs">
+          <div class="tab-list" role="tablist" aria-label="Life categories">
+            <button class="tab on" type="button" role="tab" data-tab="physical" aria-selected="true">Physical</button>
+            <button class="tab" type="button" role="tab" data-tab="intellectual" aria-selected="false">Intellectual</button>
+            <button class="tab" type="button" role="tab" data-tab="creative" aria-selected="false">Creative</button>
+            <button class="tab" type="button" role="tab" data-tab="social" aria-selected="false">Social</button>
+          </div>
+
+          <div class="panel on" id="physical" role="tabpanel">
+            <h3>Physical</h3>
+            <ul class="sq"><li>Strength and fitness training</li><li>Outdoor exploration and walking</li><li>Recreational sports</li></ul>
+          </div>
+          <div class="panel" id="intellectual" role="tabpanel">
+            <h3>Intellectual</h3>
+            <ul class="sq"><li>History and geopolitics</li><li>Economics and financial markets</li><li>Philosophy and psychology</li><li>International relations</li></ul>
+          </div>
+          <div class="panel" id="creative" role="tabpanel">
+            <h3>Creative</h3>
+            <ul class="sq"><li>Visual design and digital aesthetics</li><li>Photography and visual storytelling</li><li>Writing and content development</li></ul>
+          </div>
+          <div class="panel" id="social" role="tabpanel">
+            <h3>Social</h3>
+            <ul class="sq"><li>Student leadership and representation</li><li>Community engagement and outreach</li><li>Event planning and coordination</li></ul>
+          </div>
+          <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const life = document.getElementById("life");
+  if (!life) return;
+
+  const tabs = life.querySelectorAll(".tab");
+  const panels = life.querySelectorAll(".panel");
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener("click", function () {
+      const target = tab.dataset.tab;
+
+      tabs.forEach(function (t) {
+        t.classList.remove("on");
+        t.setAttribute("aria-selected", "false");
+      });
+
+      panels.forEach(function (panel) {
+        panel.classList.remove("on");
+      });
+
+      tab.classList.add("on");
+      tab.setAttribute("aria-selected", "true");
+
+      const selectedPanel = document.getElementById(target);
+      if (selectedPanel) {
+        selectedPanel.classList.add("on");
+      }
+    });
+  });
+});
+</script>
+
+
+ 
+        <!-- Favourite songs: YouTube IDs and chorus timestamps -->
+
+
+        <h3 class="sub-h">Favourite songs</h3>
+        <ol class="songs">
+          <li class="song" data-spotify="0YtoyjXvbsudhex7Ywo2oQ"><span class="song-no">01</span><span class="song-info"><strong>La Isla Bonita</strong><span class="mono">Madonna</span></span><button class="play" type="button">Play</button><div class="song-embed"></div></li>
+          <li class="song" data-spotify="0nuRnpPJLcyIW3hWqlYaxr"><span class="song-no">02</span><span class="song-info"><strong>Je n'ai pas changé</strong><span class="mono">Julio Iglesias</span></span><button class="play" type="button">Play</button><div class="song-embed"></div></li>
+          <li class="song" data-spotify="00Wcx9UTgNt4oCmZpAWGRp"><span class="song-no">03</span><span class="song-info"><strong>Sarà perché ti amo</strong><span class="mono">Ricchi E Poveri</span></span><button class="play" type="button">Play</button><div class="song-embed"></div></li>
+          <li class="song" data-spotify="1o82DwNisONAd2mu1RcGE6"><span class="song-no">04</span><span class="song-info"><strong>Margaret</strong><span class="mono">Lana Del Rey ft. Bleachers</span></span><button class="play" type="button">Play</button><div class="song-embed"></div></li>
+          <li class="song" data-spotify="0SFZ2bE1hVX3k5tECWziYm"><span class="song-no">05</span><span class="song-info"><strong>Con la Misma Piedra</strong><span class="mono">Julio Iglesias</span></span><button class="play" type="button">Play</button><div class="song-embed"></div></li>
+        </ol>
+
+
+
+        <!-- Movies -->
+        <h3 class="sub-h">Favourite movies</h3>
+        <div class="shelf">
+          <a class="item" href="https://www.imdb.com/title/tt0144084/" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/movie1.jpg" alt="American Psycho poster" onerror="this.remove()"></span>
+            <strong>American Psycho</strong>
+            <span class="mono">2000</span>
+          </a>
+
+          <a class="item" href="https://www.imdb.com/title/tt0080365/" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/movie2.jpg" alt="American Gigolo poster" onerror="this.remove()"></span>
+            <strong>American Gigolo</strong>
+            <span class="mono">1980</span>
+          </a>
+
+          <a class="item" href="https://www.imdb.com/title/tt0054189/" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/movie3.jpg" alt="Purple Noon poster" onerror="this.remove()"></span>
+            <strong>Purple Noon</strong>
+            <span class="mono">1960</span>
+          </a>
+
+          <a class="item" href="https://www.imdb.com/title/tt0068646/" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/movie4.jpg" alt="The Godfather poster" onerror="this.remove()"></span>
+            <strong>The Godfather</strong>
+            <span class="mono">1972</span>
+          </a>
+
+          <a class="item" href="https://www.imdb.com/title/tt0993846/" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/movie5.jpg" alt="The Wolf of Wall Street poster" onerror="this.remove()"></span>
+            <strong>The Wolf of Wall Street</strong>
+            <span class="mono">2013</span>
+          </a>
+        </div>
+
+
+
+        <!-- Books -->
+        <h3 class="sub-h">Favourite books</h3>
+        <div class="shelf">
+          <a class="item" href="https://www.goodreads.com/book/show/7144.Crime_and_Punishment" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/book1.jpg" alt="Crime and Punishment cover" onerror="this.remove()"></span>
+            <strong>Crime and Punishment</strong>
+            <span class="mono">Fyodor Dostoevsky</span>
+          </a>
+
+          <a class="item" href="https://www.goodreads.com/book/show/1816427.Notes_From_Underground" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/book2.jpg" alt="Notes from Underground cover" onerror="this.remove()"></span>
+            <strong>Notes from Underground</strong>
+            <span class="mono">Fyodor Dostoevsky</span>
+          </a>
+
+          <a class="item" href="https://www.goodreads.com/book/show/7121.The_Brothers_Karamazov" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/book3.jpg" alt="The Brothers Karamazov cover" onerror="this.remove()"></span>
+            <strong>The Brothers Karamazov</strong>
+            <span class="mono">Fyodor Dostoevsky</span>
+          </a>
+
+          <a class="item" href="https://www.goodreads.com/book/show/59834699-the-stranger" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/book4.jpg" alt="The Stranger cover" onerror="this.remove()"></span>
+            <strong>The Stranger</strong>
+            <span class="mono">Albert Camus</span>
+          </a>
+
+          <a class="item" href="https://www.goodreads.com/book/show/17690.The_Trial" target="_blank" rel="noopener">
+            <span class="cover"><img src="images/book5.jpg" alt="The Trial cover" onerror="this.remove()"></span>
+            <strong>The Trial</strong>
+            <span class="mono">Franz Kafka</span>
+          </a>
+        </div>
+      </section>
+
+
+
+    <!-- ===== WATCHLIST ===== -->
+    <section class="dark" id="watchlist">
+      <div class="wrap">
+        <p class="mk-bar">MARKET WATCH // PERSONAL WATCHLIST</p>
+        <h2>Market Interests</h2>
+        <div class="rule"></div>
+
+        <div class="mk-ticker" aria-hidden="true">
+          <div>^GSPC &nbsp;&#9650;&nbsp;&nbsp; MC.PA &nbsp;&#9650;&nbsp;&nbsp; JPM &nbsp;&#9650;&nbsp;&nbsp; AAPL &nbsp;&#9650;&nbsp;&nbsp; BRK.B &nbsp;&#9650;&nbsp;&nbsp; ^GSPC &nbsp;&#9650;&nbsp;&nbsp; MC.PA &nbsp;&#9650;&nbsp;&nbsp; JPM &nbsp;&#9650;&nbsp;&nbsp; AAPL &nbsp;&#9650;&nbsp;&nbsp; BRK.B &nbsp;&#9650;&nbsp;&nbsp;</div>
+        </div>
+
+        <div class="stocks">
+          <div class="stock">
+            <b>^GSPC</b>
+            <span>S&P 500</span>
+            <span>INDEX</span>
+          </div>
+          <div class="stock">
+            <b>MC.PA</b>
+            <span>LVMH</span>
+            <span>EURONEXT PARIS</span>
+          </div>
+          <div class="stock">
+            <b>JPM</b>
+            <span>JPMorgan Chase</span>
+            <span>NYSE</span>
+          </div>
+          <div class="stock">
+            <b>AAPL</b>
+            <span>Apple Inc.</span>
+            <span>NASDAQ</span>
+          </div>
+          <div class="stock">
+            <b>BRK.B</b>
+            <span>Berkshire Hathaway</span>
+            <span>NYSE</span>
+          </div>
+        </div>
+
+        <p class="stock-note">Markets and companies I follow. Not live prices. Not financial advice.</p>
+      </div>
+    </section>
+
+    <!-- ===== CLOSING ===== -->
+    <section class="closing">
+      <div class="wrap">
+        <pre class="reveal">He who questions his existence</pre>
+        <pre class="reveal">begins the journey towards understanding.</pre>
+        <ul class="jump reveal">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+        <p><a class="top-link" href="#top-jump">&uarr; Back to top</a></p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER (ownership statement) ===== -->
+  <footer>
+    <ul class="foot-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="biodata.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+    </ul>
+    <p>&copy; 2026 Mohamad Asyraf Mohd Razali. All rights reserved.</p>
+    <p class="mono">Created: 31 October 2026 | Last updated: 31 October 2026</p>
+    <p class="mono">Contact: <a href="mailto:mohdasyraf1205@gmail.com">mohdasyraf1205@gmail.com</a></p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="js/about.js"></script>
+</body>
+</html>
